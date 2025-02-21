@@ -24,12 +24,6 @@ const fileFilter = (req, file, cb) => {
 };
 
 // Multer upload instance
-const upload = multer({ storage, fileFilter }).single('resume');
-upload(req, res, function(err) {
-  if (err) {
-    return res.status(400).json({ error: err.message });
-  }
-  next();  // Proceed to the next middleware (the controller)
-});
+const upload = multer({ storage, fileFilter });
 
 module.exports = upload;
