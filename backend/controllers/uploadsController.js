@@ -10,6 +10,7 @@ exports.upload = async (req, res) => {
         .json({ error: "Invalid file format. Only PDF and DOCX allowed." });
     }
     const aiResponse = await geminiCreate(req.file.path);
+
     const skillsMatch = aiResponse.match(/\*\*Skills:\*\*\s*([\s\S]*?)\n\n/);
     const jobPreferencesMatch = aiResponse.match(/\*\*Job Preferences:\*\*\s*([\s\S]*)/);
 

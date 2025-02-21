@@ -42,6 +42,7 @@ ${extractedText}
 
     const result = await model.generateContent(prompt);
     const aiResponse = result.response.text();
+
     return aiResponse;
   } catch (error) {
     console.error("Error processing resume:", error);
