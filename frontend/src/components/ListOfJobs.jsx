@@ -8,7 +8,7 @@ const ListOfJobs = () => {
     useEffect(() => {
         const fetchJobListings = async () => {
           try {
-            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/joblist`);
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/joblist`);
             const jobs = response.data.jobs.results;
     
             if (Array.isArray(jobs)) {
