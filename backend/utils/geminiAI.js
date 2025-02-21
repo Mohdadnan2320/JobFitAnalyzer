@@ -40,18 +40,9 @@ Resume Content:
 ${extractedText}
 `;
 
-    // const prompt = `
-    // Extract only two key details from the following resume:
-    //   1. **Skills** (List all technical and soft skills mentioned).
-    //   2. **Job Preferences** (Desired roles, industries, or locations mentioned).
-
-    //   Resume Content:
-    // :\n${extractedText}`;
     const result = await model.generateContent(prompt);
     const aiResponse = result.response.text();
-    console.log(aiResponse);
     return aiResponse;
-    // return { extractedText, aiResponse };
   } catch (error) {
     console.error("Error processing resume:", error);
     throw new Error("Failed to extract resume data");
