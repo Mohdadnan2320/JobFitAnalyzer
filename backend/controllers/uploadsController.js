@@ -51,8 +51,6 @@ exports.jobList = async(req, res) => {
     const jobTitleRegex = /^[^,;]+/;
     const jobRole = resume.jobPreferences.match(jobTitleRegex)?.[0] || "No job preference listed";
     
-    // const jobTitle = resume.jobPreferences;
-    // const jobRole = jobTitle.split('role')[0].trim();
     const location = "India"; 
 
     const jobs = await getJobs(jobRole, location);

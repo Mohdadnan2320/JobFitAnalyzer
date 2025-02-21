@@ -12,7 +12,6 @@ exports.geminiCreate = async (filePath) => {
   try {
     let extractedText = "";
 
-    // Check file extension
     if (filePath.endsWith(".pdf")) {
       const dataBuffer = fs.readFileSync(filePath);
       const pdfData = await pdfParse(dataBuffer);

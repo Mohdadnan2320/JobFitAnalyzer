@@ -41,9 +41,9 @@ const UploadCard = () => {
   return (
     <div className="w-full h-full">
       <div className="p-10">
-        <h1 className="text-2xl font-medium my-5">Lazy Resume</h1>
+        <h1 className="text-2xl font-medium my-5">JobFit Analyzer</h1>
         <p className="text-lg leading-6">
-          upload you resume to find the perfect match for job role.{" "}
+        Upload your resume to JobFit Analyzer and let AI find the best job matches based on your skills and preferences, unlocking exciting career opportunities{" "}
         </p>
         <div className="w-full h-96 mt-10 border-2 border-dashed ">
           <div className="w-full h-full flex flex-col justify-center items-center">
@@ -54,7 +54,7 @@ const UploadCard = () => {
                 <span className="text-blue-600">or Browser</span>
               </h2>
               <input onChange={onFileChange}
-               className="w-48 mt-2 text-sm outline-none"             
+               className="w-48 mt-2 text-sm outline-none cursor-pointer"             
                type="file"
                accept=".pdf,.docx" />
                {error && <p className="text-red-500 mt-2 w-48 text-xs">{error}</p>}

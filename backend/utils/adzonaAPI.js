@@ -8,7 +8,7 @@ exports.getJobs = async (query, location) => {
     const url = `https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=${ADZUNA_APP_ID}&app_key=${ADZUNA_API_KEY}&what=${query}&where=${location}`;
     
     const response = await axios.get(url);
-    return response.data // Job results
+    return response.data
   } catch (error) {
     console.error("Error fetching jobs:", error.message);
   }
