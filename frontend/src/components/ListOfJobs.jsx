@@ -9,7 +9,6 @@ const ListOfJobs = () => {
         const fetchJobListings = async () => {
           try {
             const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/joblist`);
-            console.log(response);
             const jobs = response.data.jobs.results;
     
             if (Array.isArray(jobs)) {
