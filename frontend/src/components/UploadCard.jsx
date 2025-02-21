@@ -5,18 +5,18 @@ import { useNavigate } from "react-router-dom";
 const UploadCard = () => {
     const [error, setError] = useState("");
     const [message, setMessage] = useState("");
-    const [file, setFile] = useState(null);
+    const [resume, setResume] = useState(null);
     const navigate = useNavigate();
 
   const onFileChange = (e) => {
-    setFile(e.target.files[0]);
+    setResume(e.target.files[0]);
   };
 
   const onFileUpload = async () => {
     const formData = new FormData();
-    formData.append('resume', file);
+    formData.append('resume', resume);
 
-    if (!file) {
+    if (!resume) {
       setError("No file selected");
       return;  // Exit early if no resume is selected
     }
